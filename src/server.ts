@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import * as dotenv from 'dotenv';
 import path from 'path';
 import { authRouter } from './routes/auth.routes';
+import { userRouter } from './routes/user.routes';
 
 // database connection
 mongoose.connect('mongodb://localhost/Express-Tasker')
@@ -15,5 +16,7 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/auth', authRouter);
+app.use('/users', userRouter);
+
 
 app.listen(3000, () => { console.log(`Server is running on http://localhost:3000`)});

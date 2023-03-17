@@ -2,14 +2,12 @@ import { Request, response, Response } from 'express';
 import Userdb from '../models/user.model';
 import * as bcrypt from 'bcrypt';
 
-export const find = async ( req: Request, res: Response): Promise<Response> => {
-    const fetchedUsers = await Userdb.find();
+// export const find = async ( req: Request, res: Response): Promise<Response> => {
+//     const fetchedUsers = await Userdb.find();
 
-    return res.send({fetchedUsers})
+//     return res.send({fetchedUsers})
 
-}
-
-
+// }
 
 
 export const signUp = async (req: Request, res: Response): Promise<Response> => {
