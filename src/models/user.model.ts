@@ -1,6 +1,13 @@
-import mongoose from "mongoose";
+import mongoose, { Document } from "mongoose";
+import * as jwt from 'jsonwebtoken';
 
-const schema = new mongoose.Schema({
+interface IUser extends Document {
+    name: string;
+    email: string;
+    password: string;
+  }
+
+const userSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -19,6 +26,6 @@ const schema = new mongoose.Schema({
 
 });
 
-const Userdb = mongoose.model('userdb', schema);
+const Userdb = mongoose.model<IUser>('userdb', userSchema);
 
 export default Userdb;
