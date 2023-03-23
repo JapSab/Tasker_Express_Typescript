@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import mongoose from 'mongoose';
-import  Userdb  from '../models/user.model';
+import Userdb from '../../models/user.model';
 import * as bcrypt from 'bcrypt'
 import * as jwt from 'jsonwebtoken';
 

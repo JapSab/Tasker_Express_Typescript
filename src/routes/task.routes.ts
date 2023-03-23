@@ -1,17 +1,11 @@
 import  { Router }  from "express";
-import { getAllTasks } from "../controllers/get.all.tasks";
-import * as jwt from 'jsonwebtoken';
-import { expressjwt } from 'express-jwt';
-import { Request, Response } from 'express';
+import { getAllTasks } from "../controllers/taskControllers/get.all.tasks";
 import { auth } from "../middleware/auth";
-import { postNewTask } from "../controllers/post.task";
-import { updateTask } from "../controllers/update.task";
-import { deleteTask } from "../controllers/delete.task";
+import { postNewTask } from "../controllers/taskControllers/post.task";
+import { updateTask } from "../controllers/taskControllers/update.task";
+import { deleteTask } from "../controllers/taskControllers/delete.task";
 
 const router = Router();
-
-const jwtSecret = process.env.SECRET ;
-
 
 // get all tasks
 router.get('/alltasks', auth, getAllTasks);

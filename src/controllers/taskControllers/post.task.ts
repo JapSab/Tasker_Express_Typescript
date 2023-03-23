@@ -1,5 +1,5 @@
 import { Request,  Response } from 'express';
-import Taskdb from '../models/task.model';
+import Taskdb from '../../models/task.model';
 
 interface CustomRequest extends Request {
     user?: any;

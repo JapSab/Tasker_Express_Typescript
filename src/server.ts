@@ -1,13 +1,12 @@
-import express, { NextFunction,  Request, Response, } from 'express';
-import bodyParser, { json } from 'body-parser';
+import express from 'express';
+import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import * as dotenv from 'dotenv';
 import { authRouter } from './routes/auth.routes';
 import { userRouter } from './routes/user.routes';
 import { taskRouter } from './routes/task.routes';
 import cookieParser from 'cookie-parser';
-import session, { Session } from 'express-session';
-import Userdb from './models/user.model';
+import session from 'express-session';
 
 const MongoDBStore = require('connect-mongodb-session')(session)
 

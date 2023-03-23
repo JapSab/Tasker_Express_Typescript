@@ -1,5 +1,5 @@
 import { Request, response, Response } from 'express';
-import Userdb from '../models/user.model';
+import Userdb from '../../models/user.model';
 import * as bcrypt from 'bcrypt';
 
 // export const find = async ( req: Request, res: Response): Promise<Response> => {

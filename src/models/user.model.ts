@@ -1,5 +1,4 @@
 import mongoose, { Document } from "mongoose";
-import * as jwt from 'jsonwebtoken';
 
 interface IUser extends Document {
     name: string;
