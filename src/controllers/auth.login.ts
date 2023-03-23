@@ -10,7 +10,12 @@ declare module 'express-session' {
     }
   }
 
-export const logIn = async (req: Request, res: Response): Promise<Response> => {
+  interface CustomRequest extends Request {
+    user?: any;
+  }
+  
+
+export const logIn = async (req: CustomRequest, res: Response): Promise<Response> => {
     const user = await Userdb.findOne({ email: req.body.email });
     if (!user) return res.status(400).send({ message: "Invalid email or password." });
 

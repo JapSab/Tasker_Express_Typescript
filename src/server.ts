@@ -1,4 +1,4 @@
-import express, { NextFunction } from 'express';
+import express, { NextFunction,  Request, Response, } from 'express';
 import bodyParser, { json } from 'body-parser';
 import mongoose from 'mongoose';
 import * as dotenv from 'dotenv';
@@ -45,6 +45,7 @@ app.use(
         store: store
     })
 )
+
 
 app.use('/auth', authRouter);
 app.use('/users', userRouter);
